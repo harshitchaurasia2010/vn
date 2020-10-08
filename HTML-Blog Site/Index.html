@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BLoGs</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style media="screen">
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 70px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+</style>
+</head>
+
+
+
+<center>
+  <body>
+    <div style="background-image: url('Screenshot 2020-09-16 at 7.13.58 PM');">
+  <h1>BLoGs</h1>
+  <hr>
+  <h2>Home</h2>
+  <hr><br><br>
+  <p>Welcome to BLoGs <br>Hi,This is Harshit.Welcome to my personal blog site. Here you will mostly find Space Science Blogs. <br>To just stay updated about my blogs,visit my site regurarly.  </p>
+
+<h2>Latest Blogs</h2>
+<a href="percy.html"><img src="mars2020_rover_web.jpg" alt="Perseverance" width="200" height="200"  ><br>
+</a><h6>Courtesy:Google,BBC</h6><a href="percy.html"><p>Perseverance will bring hope after 5 months.</p></a><br>
+
+<img src="ggg.jpeg" alt="Gaganyaan"><br><h6>Courtesy: Times Now</h6>
+<a href="Gaganyaan.html">India is close to send it's first crewed mission in orbit.</a>
+</center>
+<div class="sidenav">
+  <a href="home.html">Home</a>
+  <a href="blogs.html">Blogs</a>
+  <a href="contact.html">Contact</a>
+  <button class="dropdown-btn">Blogs By Categories
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Scince.html">Science</a>
+    <a href="Space.html">Space Exploration</a>
+  </div>
+</style>
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+
+</body>
+</head>
+</html>
